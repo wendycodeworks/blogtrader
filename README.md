@@ -1,24 +1,26 @@
-# README
+# BlogTrader on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A marketplace to buy and sell niche blogs.
 
-Things you may want to cover:
+## Application components
 
-* Ruby version
+## APIs and third party services
 
-* System dependencies
+## Problem-Solution Fit
 
-* Configuration
+## Application models
 
-* Database creation
+## Database relations and schema
 
-* Database initialization
+### Data normalisation
 
-* How to run the test suite
+## User Stories
 
-* Services (job queues, cache servers, search engines, etc.)
+Entreprenuer 
 
-* Deployment instructions
+SME 
 
-* ...
+## Wireframes
+
+## Project Managment
+
