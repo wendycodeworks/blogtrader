@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_025312) do
+ActiveRecord::Schema.define(version: 2020_05_13_045834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blogs", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.string "website"
+    t.text "description"
+    t.integer "revenue"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_blogs_on_user_id"
+  end
+
+  create_table "blogs_topics", id: false, force: :cascade do |t|
+    t.bigint "blog_id", null: false
+    t.bigint "topic_id", null: false
+    t.index ["blog_id", "topic_id"], name: "index_blogs_topics_on_blog_id_and_topic_id"
+    t.index ["topic_id", "blog_id"], name: "index_blogs_topics_on_topic_id_and_blog_id"
+  end
+
+  create_table "favourites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "blog_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_favourites_on_blog_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +61,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_025312) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blogs", "users"
+  add_foreign_key "favourites", "blogs"
+  add_foreign_key "favourites", "users"
 end
