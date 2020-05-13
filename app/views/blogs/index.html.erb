@@ -2,20 +2,18 @@
 
 <h1> BlogTrader </h1>
 </br>
-<div class="blog-listings">
- <div class="card">
-    <% for blog in @blogs %>
-    <div class="card-image">
-        <figure class="image">
-        <%= image_tag "apothecary-87-Zlr-jJDqmaI-unsplash.jpg"%>
-        </figure>
-    </div>
-        <ul class="card-header-title"><%= blog.title %></ul>
-        <div class="card-content">
-            <div class="card-footer-item">
-            Monthly revenue: $<%= blog.revenue %></ul>
+<div class="section">
+    
+    <div class="container">
+        <% for blog in @blogs %>
+            <div class="card">
+                    <div class="card-image"><figure class="image is-4by3"><img <%= image_tag "apothecary-87-Zlr-jJDqmaI-unsplash.jpg"%>></figure></div>
+                        <div class="card-header-title"><%= blog.title %></div>
+                            <div class="card-content">Monthly revenue: $<%= blog.revenue %></div>
             </div>
-        </div>
-    <%end%>
-     </div>
+        <%end%>          
+    </div>
+                            
+       
+    
 </div>
