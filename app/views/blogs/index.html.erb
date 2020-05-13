@@ -1,1 +1,21 @@
-BlogTrader
+
+
+<h1> BlogTrader </h1>
+</br>
+<div class="blog-listings">
+ <div class="card">
+    <% for blog in @blogs %>
+    <div class="card-image">
+        <figure class="image">
+        <%= image_tag "apothecary-87-Zlr-jJDqmaI-unsplash.jpg"%>
+        </figure>
+    </div>
+        <ul class="card-header-title"><%= blog.title %></ul>
+        <div class="card-content">
+            <div class="card-footer-item">
+            Monthly revenue: $<%= blog.revenue %></ul>
+            </div>
+        </div>
+    <%end%>
+     </div>
+</div>

@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
     before_action :authenticate_user!
+    before_action 
 
     def index
         @blogs = Blog.all
@@ -14,7 +15,12 @@ class BlogsController < ApplicationController
     end
 
     def create
-        @blog = current_users.blogs.create(blog_params)
+        @blog = current_user.blogs.create(blog_params)
+        if @blog.errors.any?
+            render "new"
+        else
+            redirect_to root_path
+        end
     end
 
     def edit
