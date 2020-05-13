@@ -1,0 +1,25 @@
+<%= form_with(model: @blog, local: true) do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div>
+        <%= form.label :website %>
+        <%= form.text_field :website %>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+    <div>
+        <%= form.label :revenue %>
+        <%= form.number_field :revenue %>
+    </div>
+    <div>
+        <%= form.label :price %>
+        <%= form.number_field :revenue %>
+    </div>
+    <div>
+    <%= form.submit %>
+    </div>
+    <% end %>
