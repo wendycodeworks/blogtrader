@@ -11,7 +11,10 @@
 <% for i in @blog_topic %>
 <%= i[:name]%>
 <% end %>
+<div style="display:flex;">
+<div class="blog-img" style="width: 250px; height: 250px;"><%= image_tag @blog.picture if @blog.picture.attached?%></div>
 <div><%= @blog.website %></div>
 <div><%= @blog.description %></div>
 <div><%= @blog.revenue %></div>
 <div><%= @blog.price %></div>
+</div>
