@@ -7,26 +7,28 @@ class BlogsController < ApplicationController
     end
 
     def show
-        p "******"
         @blog = Blog.find(params["id"])
-        p "******"
     end
 
     def new
         @blog = Blog.new
     end
 
-    def create
+    def create       
         @blog = current_user.blogs.create(blog_params)
         if @blog.errors.any?
             render "new"
         else
             redirect_to root_path
         end
+        for topic in params[:blog][:topic].split(", ")
+           Blog.last.topics.create(name: topic)
+        end
     end
 
     def edit
-    
+    @blog = Blog.find(params["id"])
+
     end
 
     def update

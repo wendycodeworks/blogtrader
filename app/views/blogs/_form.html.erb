@@ -1,25 +1,29 @@
-<%= form_with(model: @blog, local: true) do |form| %>
+<%= form_with model: @blog, local: true do |form| %>
     <div>
         <%= form.label :title %>
-        <%= form.text_field :title %>
+        <%= form.text_field :title, value: blog.title %>
     </div>
     <div>
         <%= form.label :website %>
-        <%= form.text_field :website %>
+        <%= form.text_field :website, value: blog.website %>
     </div>
     <div>
         <%= form.label :description %>
-        <%= form.text_field :description %>
+        <%= form.text_field :description, value: blog.description %>
     </div>
     <div>
         <%= form.label :revenue %>
-        <%= form.number_field :revenue %>
+        <%= form.number_field :revenue, value: blog.revenue %>
     </div>
     <div>
         <%= form.label :price %>
-        <%= form.number_field :revenue %>
+        <%= form.number_field :price, value: blog.price %>
     </div>
     <div>
-    <%= form.submit %>
+    <%= form.label :topic %>
+    <%= form.text_field :topic %>
     </div>
-    <% end %>
+    <div>
+    <%= form.submit %> 
+    </div>
+<% end %>
