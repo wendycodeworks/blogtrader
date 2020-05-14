@@ -20,10 +20,16 @@
         <%= form.number_field :price, value: blog.price %>
     </div>
     <div>
-    <%= form.label :topic %>
-    <%= form.text_field :topic %>
+        <%= form.label :topic %>
+
+        <% str = ""%>
+        <%for i in blog.topics%>
+        <% str << i[:name] << ", " %>
+        <% end %>
+        <%= form.text_field :topic, value: str %>
+        
     </div>
     <div>
-    <%= form.submit %> 
+        <%= form.submit %> 
     </div>
 <% end %>

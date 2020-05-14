@@ -1,6 +1,9 @@
 
 
 <h1> BlogTrader </h1>
+
+<%= link_to '<button type="button">Create a Listing</button>'.html_safe, new_blog_path %>
+
 </br>
 <div class="section">
     
@@ -8,7 +11,7 @@
         <% for blog in @blogs %>
             <div class="card">
                     <div class="card-image"><figure class="image is-4by3"><img <%= image_tag "apothecary-87-Zlr-jJDqmaI-unsplash.jpg"%>></figure></div>
-                        <div class="card-header-title"><%= blog.title %></div>
+                        <div class="card-header-title"><%=link_to blog.title, blog_path(blog.id) %></div>
                             <div class="card-content">Monthly revenue: $<%= blog.revenue %></div>
             </div>
         <%end%>          

@@ -1,3 +1,17 @@
-<%= @blog.title %>
-<%= image_tag "apothecary-87-Zlr-jJDqmaI-unsplash.jpg"%>
-<%= link_to '<button type="button">Edit</button>'.html_safe, edit_blog_path %>
+<div style="display:flex; justify-content: space-between; width: 500px;">
+<div><%= @blog.title %></div>
+
+<div><%= link_to '<button type="button">Edit</button>'.html_safe, edit_blog_path %> </div>
+    <%= form_with model: @blog, local: true, method: "delete" do |form| %>
+                <div class="modify-icons" style="margin-left: 30px">
+                    <%= submit_tag "Delete"%>
+                </div>
+            <% end %>
+</div>
+<% for i in @blog_topic %>
+<%= i[:name]%>
+<% end %>
+<div><%= @blog.website %></div>
+<div><%= @blog.description %></div>
+<div><%= @blog.revenue %></div>
+<div><%= @blog.price %></div>

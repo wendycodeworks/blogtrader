@@ -8,6 +8,7 @@ class BlogsController < ApplicationController
 
     def show
         @blog = Blog.find(params["id"])
+        @blog_topic = Blog.find(params["id"]).topics
     end
 
     def new
@@ -27,8 +28,7 @@ class BlogsController < ApplicationController
     end
 
     def edit
-    @blog = Blog.find(params["id"])
-
+        @blog = Blog.find(params["id"])
     end
 
     def update
@@ -36,7 +36,7 @@ class BlogsController < ApplicationController
         if @blog.errors.any?
             render "edit"
         else
-            redirect_to root_path
+            redirect_to blog_url
         end
     end
 
@@ -48,11 +48,15 @@ class BlogsController < ApplicationController
     private
     
     def set_blog
-        @blog.find(params["id"])
+        Blog.find(params["id"])
     end
 
     def blog_params
         params.require(:blog).permit(:title, :website, :description, :revenue, :price)
+    end
+
+    def topic_params
+        params.require(:topic).permit(:name)
     end
 
 end
