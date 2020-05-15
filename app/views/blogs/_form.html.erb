@@ -1,39 +1,40 @@
+<div>
 <%= form_with model: @blog, local: true do |form| %>
     <div>
-        <%= form.label :title %>
-        <%= form.text_field :title, value: blog.title %>
+        <div class="label"><%= form.label :title %></div>
+        <div class="label"><%= form.text_field :title, value: blog.title %></div>
     </div>
     <div>
-        <%= form.label :website %>
-        <%= form.text_field :website, value: blog.website %>
+        <div class="label"><%= form.label :website %></div>
+        <div class="label"><%= form.text_field :website, value: blog.website %></div>
     </div>
     <div>
-        <%= form.label :description %>
-        <%= form.text_field :description, value: blog.description %>
+        <div class="label"><%= form.label :description %></div>
+        <div class="label"><%= form.text_field :description, value: blog.description %></div>
     </div>
     <div>
-        <%= form.label :revenue %>
-        <%= form.number_field :revenue, value: blog.revenue %>
+        <div class="label"><%= form.label :revenue %></div>
+        <div class="label"><%= form.number_field :revenue, value: blog.revenue %></div>
     </div>
     <div>
-        <%= form.label :price %>
-        <%= form.number_field :price, value: blog.price %>
+        <div class="label"><%= form.label :price %></div>
+        <div class="label"><%= form.number_field :price, value: blog.price %></div>
     </div>
     <div>
-        <%= form.label :topic %>
+        <div class="label"><%= form.label :topic %></div>
 
         <% str = ""%>
         <%for i in blog.topics%>
         <% str << i[:name] << ", " %>
         <% end %>
-        <%= form.text_field :topic, value: str %>
+        <div class="label"><%= form.text_field :topic, value: str %></div>
         
     </div>
     <div>
-        <%= form.label :picture %> <%= form.file_field :picture, accept:
-        'image/png,image/gif,image/jpeg,image/jpg' %>
-    </div>
+        <div class="label"><%= form.label :picture %> <div class="label"></div><%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
+    </div></div>
     <div>
-        <%= form.submit %> 
+        <div class="button is-success"><%= form.submit %></div> 
     </div>
 <% end %>
+</div>

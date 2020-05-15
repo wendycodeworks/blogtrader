@@ -22,7 +22,7 @@ class BlogsController < ApplicationController
         else
             redirect_to root_path
         end
-        for topic in params[:blog][:topic].split(", ")
+        for topic in params[:blog][:topic].downcase.split(", ")
            Blog.last.topics.create(name: topic)
         end
     end
@@ -37,6 +37,11 @@ class BlogsController < ApplicationController
             render "edit"
         else
             redirect_to blog_url
+        end
+        # Update blog listing with new topics per user input
+        Blog.find(params["id"]).topics.destroy_all
+        for topic in params[:blog][:topic].downcase.split(", ")
+            Blog.find(params["id"]).topics.create(name: topic)
         end
     end
 
@@ -53,10 +58,6 @@ class BlogsController < ApplicationController
 
     def blog_params
         params.require(:blog).permit(:title, :website, :description, :revenue, :price, :picture)
-    end
-
-    def topic_params
-        params.require(:topic).permit(:name)
     end
 
 end

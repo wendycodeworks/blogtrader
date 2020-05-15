@@ -1,13 +1,18 @@
-
-
-<h1> BlogTrader </h1>
-
-<%= link_to '<button type="button">Create a Listing</button>'.html_safe, new_blog_path %>
-
-</br>
-<div class="section">
-    
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
     <div class="container">
+      <h1 class="title">
+        BlogTrader
+      </h1>
+      <h2 class="subtitle">
+        Find your next online project
+      </h2>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+    <div class="blog-container">
         <% for blog in @blogs %>
             <div class="card">
                     <div class="card-image"><figure class="image is-4by3"><img <%= image_tag blog.picture if blog.picture.attached? %>></figure></div>
@@ -15,8 +20,5 @@
                             <div class="card-content">Monthly revenue: $<%= blog.revenue %></div>
             </div>
         <%end%>          
-    </div>
-                            
-       
-    
+    </div>   
 </div>
