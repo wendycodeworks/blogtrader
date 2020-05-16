@@ -1,20 +1,18 @@
-<div style="display:flex; justify-content: space-between; width: 500px;">
-<div><%= @blog.title %></div>
-
-<div><%= link_to '<button type="button">Edit</button>'.html_safe, edit_blog_path %> </div>
-    <%= form_with model: @blog, local: true, method: "delete" do |form| %>
-                <div class="modify-icons" style="margin-left: 30px">
-                    <%= submit_tag "Delete"%>
-                </div>
-            <% end %>
-</div>
-<% for i in @blog_topic %>
-<%= i[:name]%>
-<% end %>
-<div style="display:flex;">
-<div class="blog-img" style="width: 250px; height: 250px;"><%= image_tag @blog.picture if @blog.picture.attached?%></div>
-<div><%= @blog.website %></div>
-<div><%= @blog.description %></div>
-<div><%= @blog.revenue %></div>
-<div><%= @blog.price %></div>
+<div>
+    <div class="columns" style="display:flex;">
+        <div class="column"></div>
+        <div class="column">
+            <div class="blog-img" style="width: 250px; height: 250px;"><%= image_tag @blog.picture if @blog.picture.attached?%></div>
+        </div>
+        <div class="column">
+            <h1><%= @blog.title %></h1>
+            <div>$<%= @blog.price %>.00</div>
+            <div><%= @blog.website %></div>
+            <div><%= @blog.description %></div>
+            <div>Average monthly revenue: $<%= @blog.revenue %>.00</div>
+            <div><% for i in @blog_topic %>
+                    <div class="tag is-rounded"><%= i[:name]%></div>
+                    <% end %></div>
+        </div>
+        <div class="column"></div>
 </div>
