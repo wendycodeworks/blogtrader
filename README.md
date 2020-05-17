@@ -4,6 +4,13 @@ A marketplace to buy and sell niche blogs.
 
 ## Application components
 
+Users: 
+
+Listings:
+
+Topic tags:
+
+
 ## APIs and third party services
 
 ## Problem-Solution Fit
@@ -16,11 +23,27 @@ A marketplace to buy and sell niche blogs.
 
 ## User Stories
 
-Entreprenuer 
+Buyer
+> Wants to make a listing
+> Wants to add details about the listing including price
+> Wants the ability to make edits to the listing
+> Wants the ability to delete a listing
+> Wants to receive enquiries about the listing
 
-SME 
+Seller
+> Wants information on a listing
+> Wants to enquire on a listing
+> Wants to search for the listing
 
 ## Wireframes
 
-## Project Managment
+## Project Management
+
+The MVP was developed with the Agile methodology. The project started with the essential features:
+
+* CRUD for listings
+* Image upload capabilities
+* Devise
+
+A basic rails application was built within a 4 day sprint.
 
