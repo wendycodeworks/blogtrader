@@ -1,39 +1,37 @@
-<div>
+<div style="width: 500px">
 <%= form_with model: @blog, local: true do |form| %>
     <div>
-        <div class="label"><%= form.label :title %></div>
-        <div class="label"><%= form.text_field :title, value: blog.title %></div>
+        <label class="label"><%= form.label :title %></label>
+        <div class="label"><%= form.text_field :title, value: blog.title, class: "input is-small" %></div>
     </div>
     <div>
-        <div class="label"><%= form.label :website %></div>
-        <div class="label"><%= form.text_field :website, value: blog.website %></div>
+        <label class="label"><%= form.label :website %></label>
+        <div><%= form.text_field :website, value: blog.website, class: "input is-small" %></div>
     </div>
     <div>
         <div class="label"><%= form.label :description %></div>
-        <div class="label"><%= form.text_field :description, value: blog.description %></div>
+        <div><%= form.text_area :description, value: blog.description, class: "textarea is-small" %></div>
     </div>
     <div>
         <div class="label"><%= form.label :revenue %></div>
-        <div class="label"><%= form.number_field :revenue, value: blog.revenue %></div>
+        <div class="label"><%= form.number_field :revenue, value: blog.revenue, class: "input is-small" %></div>
     </div>
     <div>
         <div class="label"><%= form.label :price %></div>
-        <div class="label"><%= form.number_field :price, value: blog.price %></div>
+        <div class="label"><%= form.number_field :price, value: blog.price, class: "input is-small" %></div>
     </div>
     <div>
         <div class="label"><%= form.label :topic %></div>
-
         <% str = ""%>
         <%for i in blog.topics%>
         <% str << i[:name] << ", " %>
         <% end %>
-        <div class="label"><%= form.text_field :topic, value: str %></div>
+        <div class="label"><%= form.text_field :topic, value: str, class: "input is-small" %></div>
         
     </div>
     <div>
         <div class="label"><%= form.label :picture %> <div class="label"></div><%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
-    </div></div>
-    <div>
+    <div style="margin-top: 25px;">
         <div><%= form.submit :Create,  class: "button is-success" %></div> 
     </div>
 <% end %>
