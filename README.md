@@ -24,16 +24,16 @@ Topic tags:
 ## User Stories
 
 Buyer
-> Wants to make a listing
-> Wants to add details about the listing including price
-> Wants the ability to make edits to the listing
-> Wants the ability to delete a listing
-> Wants to receive enquiries about the listing
+* Wants to make a listing
+* Wants to add details about the listing including price
+* Wants the ability to make edits to the listing
+* Wants the ability to delete a listing
+* Wants to receive enquiries about the listing
 
 Seller
-> Wants information on a listing
-> Wants to enquire on a listing
-> Wants to search for the listing
+* Wants information on a listing
+* Wants to enquire on a listing
+* Wants to search for the listing
 
 ## Wireframes
 
