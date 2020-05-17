@@ -66,3 +66,5 @@ gem "devise", "~> 4.7"
 gem "bulma-rails", "~> 0.8.0"
 
 gem "aws-sdk-s3", "~> 1.64"
+
+gem 'ransack'

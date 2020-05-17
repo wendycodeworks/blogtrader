@@ -15,6 +15,8 @@ Topic tags:
 
 ## Problem-Solution Fit
 
+As individuals and businesses alike look for more effective ways produce income and generate business, online marketplaces will continue to increase in popularity.
+
 ## Application models
 
 ## Database relations and schema
