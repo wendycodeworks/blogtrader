@@ -34,7 +34,7 @@
         <div class="label"><%= form.label :picture %> <div class="label"></div><%= form.file_field :picture, accept: 'image/png,image/gif,image/jpeg,image/jpg' %>
     </div></div>
     <div>
-        <div class="button is-success"><%= form.submit %></div> 
+        <div><%= form.submit :Submit,  class: "button is-success" %></div> 
     </div>
 <% end %>
 </div>
