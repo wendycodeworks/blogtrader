@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :blogs
   resources :favourites
   resources :topic
+  get "/manage", to: "blogs#manage", as: "manage_listings"
 end

@@ -3,5 +3,6 @@ class Blog < ApplicationRecord
   has_many :blogs_topics
   has_many :topics, through: :blogs_topics 
   has_one_attached :picture
+  has_many :favourites
 end
 
