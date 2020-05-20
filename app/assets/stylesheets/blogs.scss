@@ -2,7 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.blog-container {
+.hero-body {
+    background: url(asset_path('bkg-hero-body.jpg')) no-repeat center center/cover
+}
+
+.container {
+    width: 50px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.listing-container {
     display: flex;
     justify-content: space-around;
     padding: 0px 100px 0px 100px;
@@ -13,3 +24,12 @@
 .card {
     margin-bottom: 30px;
 }
+
+.label {
+    margin: 15px 0px 5px 0px;
+}
+
+.input {
+    margin: 0px; 
+}
+

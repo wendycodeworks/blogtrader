@@ -1,18 +1,14 @@
-<section class="hero is-large is-primary is-bold">
+<section class="hero is-fullheight-with-navbar is-light is-bold">
   <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        BlogTrader
-      </h1>
-    </div>
-    <div class="container has-text-centered" style="width: 250px;">
-    <%= search_form_for @q do |f| %>
-
-    <%= f.label :find_a_blog %>
-    <%= f.search_field :title_cont, class: "input is-small" %>
-    <%= f.submit %>
-    <% end %>
-  </div>
+      <div class="container has-text-centered">
+        
+            <%= search_form_for @q do |f| %>
+            <%= f.label :find_a_blog, class: "title", style: "color: white;" %>
+            <%= f.search_field :title_cont, class: "input is-medium", placeholder: "Hello, is it me you're looking for?", style: "margin: 15px 0px 15px 0px;" %>
+            <%= f.submit :Search, class: "button is-primary" %>
+            <% end %>
+        
+      </div>
   </div>
 </section>
 

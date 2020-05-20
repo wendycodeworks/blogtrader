@@ -63,7 +63,7 @@ class BlogsController < ApplicationController
 
     def destroy
         Blog.find(params["id"]).destroy
-        redirect_to root_path
+        redirect_to manage_listings_path
     end
 # =================== Blog Methods End ==================== #
 
