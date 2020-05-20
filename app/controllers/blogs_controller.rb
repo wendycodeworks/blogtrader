@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
     before_action :authenticate_user!
-    before_action 
 
 # ==================== Search Methods ===================== #
     def index

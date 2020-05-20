@@ -1,24 +1,44 @@
 # BlogTrader on Rails
 
 A marketplace to buy and sell niche blogs.
+\- Sitemap
+\- Screenshots
+\- Target audience
+
+## Problem-Solution Fit
+
+Blogging remains popular to individuals and businesses alike. As e-commerce continues to grow, the value of a well-maintained blog cannot be overstated. A successful blog can entice thousands of visitors each month and it's the traffic that often determines the viability of a blog. Since the first blogs emerged, monetization of blogs have developed in complexity. Affiliate sales are one of the most lucrative ways to create an income for individuals. And for businesses, attaching a quality blog to their brand can be a multi-prong benefit; establishing reputation, create leads and engaging customers are all things that can be done with a blog. However, starting a blog from scratch is not always practical and can be difficult. Between producing content, promotion content and monetizing content, it can be daunting for newcomers and expensive for businesses. 
+
+BlogTrader provides a centralised platform to buy and sell monetized blogs. 
 
 ## Application components
 
-Users - 
+**User accounts** - Buyers and sellers are recognised as users on the platform. A user can create and enquire on a listing by creating an account. This is done by signing up through the site, which requires an email and a password.
 
-Listings - 
+**Listings** - Blogs are presented as listings on the platform. Listings contain key details about the blog on sale such as domain name, description and monthly revenue. Users can upload a screenshot of their website to help attract a buyer.
 
-Topic tags - 
-
-Search/Filter -
+**Topic tags** - User have the ability to add tags to their listings. Doing so will help buyers search for their blog by niche and keywords associated with their targeted topic.
 
 
-## APIs and third party services
+## Tech stack, APIs and third party services
 
-## Problem-Solution Fit
-Blogging remains popular to individuals and businesses alike. As e-commerce continues to grow, the value of a well-maintained blog cannot be overstated. However, starting a blog from scratch remains one of the biggest blockers for people or businesses looking to enter the industry. 
+**Tech stack**
 
-BlogTrader provides a centralised platform to buy and sell monetized blogs. 
+Ruby on Rails
+
+Bulma CSS framework
+
+Postgresql
+
+**Third Party Services**
+
+Amazon S3
+
+Heroku
+
+Devise
+
+Ransack
 
 ## Application models
 
@@ -34,23 +54,25 @@ BlogTrader provides a centralised platform to buy and sell monetized blogs.
 
 ## User Stories
 
-**Buyer**
+| Feature        | User   | Story                                                        |
+| -------------- | ------ | ------------------------------------------------------------ |
+| Listing        | Buyer  | - Wants information on a listing <br />- Wants to enquire on a listing <br />- Wants to search for the listing |
+| Listing        | Seller | - Wants to make a listing <br />- Wants to add details about the listing including price <br />- Wants the ability to make edits to the listing <br />- Wants the ability to delete a listing <br />- Wants to receive enquiries about the listing |
+| Accounts       | Buyer  | - Wants to keep their listings in one place<br />- Wants a personalised experience<br />- Wants to manage their account settings |
+| Accounts       | Seller | - Wants a personalised experience<br />- Wants to store essential information<br />- Wants to manage their account settings |
+| Authentication | Buyer  | - Wants security on their account                            |
+| Authentication | Seller | - Wants security on their account<br />- Wants protection of their essential information |
+| Dashboard      | Buyer  | - Wants to view all their listings<br />- Wants a streamlined management dash to manage their listings |
 
-* Wants to make a listing
-* Wants to add details about the listing including price
-* Wants the ability to make edits to the listing
-* Wants the ability to delete a listing
-* Wants to receive enquiries about the listing
 
-**Seller**
-
-* Wants information on a listing
-* Wants to enquire on a listing
-* Wants to search for the listing
 
 ## Wireframes
 
+
+
 ## Project Management
+
+The scope of the project was determined prior to commencement of the development. 
 
 The MVP was developed with the Agile methodology. The project started with the essential features:
 
@@ -58,5 +80,5 @@ The MVP was developed with the Agile methodology. The project started with the e
 * Image upload capabilities
 * Devise
 
-A basic rails application was built within a 4 day sprint.
+A basic rails application was built within a 3 day sprint.
 
