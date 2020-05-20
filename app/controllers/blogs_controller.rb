@@ -13,6 +13,28 @@ class BlogsController < ApplicationController
     def show
         @blog = Blog.find(params["id"])
         @blog_topic = Blog.find(params["id"]).topics
+
+        session = Stripe::Checkout::Session.create(
+            payment_method_types: ['card'],
+            customer_email: current_user.email,
+            line_items: [{
+                name: @blog.title,
+                description: @blog.website,
+                amount: @blog.deposit_amount * 100,
+                currency: 'aud',
+                quantity: 1,
+            }],
+            payment_intent_data: {
+                metadata: {
+                    user_id: current_user.id,
+                    listing_id: @blog.id
+                }
+            },
+            success_url: "#{root_url}payments/success?userId=#{current_user.id}&listingId=#{@blog.id}",
+            cancel_url: "#{root_url}listings"
+        )
+    
+        @session_id = session.id
     end
 
     def new

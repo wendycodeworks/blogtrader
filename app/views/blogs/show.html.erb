@@ -13,7 +13,23 @@
             <div style="margin-top: 10px;"><% for i in @blog_topic %>
                     <div class="tag is-rounded"><%= i[:name]%></div>
                     <% end %></div>
-            <div class="button" style="margin-top: 15px;">Contact Seller</div>
+            
+            <button data-stripe="payment" class="button">Pay Deposit <%= number_to_currency(@blog.deposit_amount) %></button>
+            <script src="https://js.stripe.com/v3/"></script>
+            <script>
+                document
+                    .querySelector("[data-stripe='payment']")
+                    .addEventListener("click", () => {
+                    const stripe = Stripe(
+                        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+                    );
+
+                    stripe.redirectToCheckout({
+                        sessionId: "<%= @session_id %>"
+                    });
+                    });
+            </script>
         </div>
         <div class="column"></div>
 </div>
+

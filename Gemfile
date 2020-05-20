@@ -68,3 +68,7 @@ gem "bulma-rails", "~> 0.8.0"
 gem "aws-sdk-s3", "~> 1.64"
 
 gem 'ransack'
+
+gem "stripe", "~> 5.22"
+
+gem "ultrahook", "~> 0.1.5"
