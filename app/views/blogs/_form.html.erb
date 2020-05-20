@@ -31,6 +31,10 @@
             <div class="label"><%= form.number_field :price, value: blog.price, class: "input is-small", required: true %></div>
         </div>
         <div>
+            <div class="label"><%= form.label :deposit %></div>
+            <div class="label"><%= form.number_field :deposit_amount, value: blog.deposit_amount, class: "input is-small", required: true %></div>
+        </div>
+        <div>
             <div class="label"><%= form.label :topic %></div>
             <% str = ""%>
             <%for i in blog.topics%>
