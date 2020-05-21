@@ -50,7 +50,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ### Database Schema
 
-![blogtrader_erd](./docs/blogtrader_erd)
+![blogtrader_erd](./docs/blogtrader_erd.png)
 
 ## User Stories
 
