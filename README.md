@@ -1,15 +1,19 @@
 # BlogTrader on Rails
 
 A marketplace to buy and sell niche blogs.
+
+Github: https://github.com/wendycodeworks/market-on-rails
+
+Site: https://blogtrader.herokuapp.com/
+
 \- Sitemap
 \- Screenshots
-\- Target audience
 
 ## Problem-Solution Fit
 
 Blogging remains popular to individuals and businesses alike. As e-commerce continues to grow, the value of a well-maintained blog cannot be overstated. A successful blog can entice thousands of visitors each month and it's the traffic that often determines the viability of a blog. Since the first blogs emerged, monetization of blogs have developed in complexity. Affiliate sales are one of the most lucrative ways to create an income for individuals. And for businesses, attaching a quality blog to their brand can be a multi-prong benefit; establishing reputation, create leads and engaging customers are all things that can be done with a blog. However, starting a blog from scratch is not always practical and can be difficult. Between producing content, promotion content and monetizing content, it can be daunting for newcomers and expensive for businesses. 
 
-BlogTrader provides a centralised platform to buy and sell monetized blogs. 
+BlogTrader provides a centralised platform to buy and sell monetized blogs. This service is targeted towards solo-entrepreneurs, e-commerce brands and SMEs.  The web-app has been designed to streamline listing creation and payments processing. 
 
 ## Application components
 
@@ -18,6 +22,10 @@ BlogTrader provides a centralised platform to buy and sell monetized blogs.
 **Listings** - Blogs are presented as listings on the platform. Listings contain key details about the blog on sale such as domain name, description and monthly revenue. Users can upload a screenshot of their website to help attract a buyer.
 
 **Topic tags** - User have the ability to add tags to their listings. Doing so will help buyers search for their blog by niche and keywords associated with their targeted topic.
+
+BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rails Framework, it applies the MVC - model, view, controller - pattern. 
+
+********** TO BE EXPANDED ************
 
 
 ## Tech stack, APIs and third party services
@@ -29,7 +37,7 @@ BlogTrader provides a centralised platform to buy and sell monetized blogs.
 | **Database**   | Postgresql                                    |
 | **Deployment** | Heroku                                        |
 | **Utilities**  | Amazon S3, Devise, Ransack, Stripe, Ultrahook |
-| **Project**    | Git, Git - Projects                           |
+| **Project**    | Git, GitProjects                              |
 
 ## Database relations
 
@@ -41,8 +49,6 @@ BlogTrader provides a centralised platform to buy and sell monetized blogs.
 | User        | ``has_many`` blogs                                           |
 
 ### Database Schema
-
-### Data normalisation
 
 
 
@@ -70,9 +76,9 @@ The scope of the project was determined prior to commencement of the development
 
 The MVP was developed with the Agile methodology. The project started with the essential features:
 
-* CRUD for listings
+* CRUD for blog listings
 * Image upload capabilities
 * Devise
 
-A basic rails application was built within a 3 day sprint.
+A basic rails application was built within a 3 day sprint. The optional features - such as topic tags and Stripe- were addressed in the following week. 
 
