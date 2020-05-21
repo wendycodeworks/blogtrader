@@ -68,7 +68,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ## Wireframes
 
-![blogtrader_wireframes](./doc/blogtrader_wireframes.png)
+![blogtrader_wireframes](./docs/blogtrader_wireframes.png)
 
 ## Project Management
 
