@@ -6,7 +6,8 @@ Github: https://github.com/wendycodeworks/blogtrader
 
 Site: https://blogtrader.herokuapp.com/
 
-\- Sitemap
+![blogtrader_sitemap](./app/assets/images/blogtrader_sitemap.png)
+
 \- Screenshots
 
 ## Problem-Solution Fit
@@ -50,7 +51,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ### Database Schema
 
-![blogtrader_erd](./docs/blogtrader_erd.png)
+![blogtrader_erd](./app/assets/images/blogtrader_erd.png)
 
 ## User Stories
 
@@ -68,7 +69,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ## Wireframes
 
-![blogtrader_wireframes](./docs/blogtrader_wireframes.png)
+![blogtrader_wireframes](./app/assets/images/blogtrader_wireframes.png)
 
 ## Project Management
 

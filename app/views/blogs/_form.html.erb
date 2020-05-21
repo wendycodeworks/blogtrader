@@ -12,7 +12,7 @@
     <%= form_with model: @blog, local: true do |form| %>
         <div>
             <label class="label"><%= form.label :title %></label>
-            <div class="label"><%= form.text_field :title, value: blog.title, class: "input is-small", required: true, minlength: "20" %></div>
+            <div class="label"><%= form.text_field :title, value: blog.title, class: "input is-small", required: true, minlength: "10" %></div>
         </div>
         <div>
             <label class="label"><%= form.label :website %></label>
@@ -20,7 +20,7 @@
         </div>
         <div>
             <div class="label"><%= form.label :description %></div>
-            <div><%= form.text_area :description, value: blog.description, class: "textarea is-small", required: true, minlength: "350" %></div>
+            <div><%= form.text_area :description, value: blog.description, class: "textarea is-small", required: true, minlength: "100" %></div>
         </div>
         <div>
             <div class="label"><%= form.label :revenue %></div>
