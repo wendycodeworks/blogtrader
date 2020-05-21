@@ -2,19 +2,18 @@
     <div class="columns" style="display:flex;">
         <div class="column"></div>
         <div class="column">
-            <div class="blog-img" style="width: 250px; height: 250px;"><%= image_tag @blog.picture if @blog.picture.attached?%></div>
+            <div class="blog-img" style="width: 350px; height: 450px;"><%= image_tag @blog.picture if @blog.picture.attached?%></div>
         </div>
         <div class="column">
             <h1 class="title"><%= @blog.title %></h1>
-            <div>$<%= @blog.price %>.00</div>
-            <div><%= @blog.website %></div>
-            <div><%= @blog.description %></div>
-            <div>Average monthly revenue: $<%= @blog.revenue %>.00</div>
+            <div class="box"><%= @blog.website %></div>
+            <div class="box">$<%= @blog.price %>.00</div>
+             <div class="box">Average monthly revenue: $<%= @blog.revenue %>.00</div>
             <div style="margin-top: 10px;"><% for i in @blog_topic %>
                     <div class="tag is-rounded"><%= i[:name]%></div>
                     <% end %></div>
-            
-            <button data-stripe="payment" class="button">Pay Deposit <%= number_to_currency(@blog.deposit_amount) %></button>
+            <button data-stripe="payment" class="button is-success">Pay Deposit <%= number_to_currency(@blog.deposit_amount) %></button>
+            <div class="box"><%= @blog.description %></div>            
             <script src="https://js.stripe.com/v3/"></script>
             <script>
                 document

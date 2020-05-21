@@ -59,7 +59,7 @@ class BlogsController < ApplicationController
 #       Manage blog listing display current user blogs
 #----------------------------------------------------------
     def manage
-    @blogs = current_user.blogs.all
+        @blogs = current_user.blogs.all
     end
 
     def edit

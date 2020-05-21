@@ -1,4 +1,10 @@
-
+<% if @blogs.length == 0 %>
+<div class="hero is-fullheight-with-navbar">
+    <div class="container">
+        <h1 class="subtitle"> No listings yet! </h1>
+    </div>
+</div>
+        <% else %>
 <div class="section">
     <div class="listing-container">
         <% for blog in @blogs %>
@@ -19,3 +25,4 @@
         <%end%>          
     </div>   
 </div>
+ <%end%>  
