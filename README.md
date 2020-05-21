@@ -2,7 +2,7 @@
 
 A marketplace to buy and sell niche blogs.
 
-Github: https://github.com/wendycodeworks/market-on-rails
+Github: https://github.com/wendycodeworks/blogtrader
 
 Site: https://blogtrader.herokuapp.com/
 
@@ -50,7 +50,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ### Database Schema
 
-
+![blogtrader_erd](./docs/blogtrader_erd)
 
 ## User Stories
 
