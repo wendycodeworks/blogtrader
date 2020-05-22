@@ -12,15 +12,17 @@ Site: https://blogtrader.herokuapp.com/
 
 <img src="./app/assets/images/blogtrader_homepg.png" alt="blogtrader_home" style="zoom:50%;" />
 
-<img src="./app/assets/images/blogtrader_signuppg.png" alt="blogtrader_signup" style="zoom:50%;" />
 
-<img src="./app/assetsimages/blogtrader_indexpg.png" style="zoom:50%;" />
+
+<img src="./app/assets/images/blogtrader_indexpg.png" style="zoom:50%;"/>
 
 <img src="./app/assets/images/blogtrader_createpg.png" style="zoom:50%;" />
 
 <img src="C:\Users\wendy\projects\Term 2\Week 4\blogtrader\app\assets\images\blogtrader_createpg2.png" style="zoom:50%;" />
 
 <img src="./app/assets/images/blogtrader_listingpg.png" alt="blogtrader_listing" style="zoom:50%;" />
+
+![blogtrader_listingspg](./app/assets/images/blogtrader_listingspg.png)
 
 ## Problem-Solution Fit
 
@@ -36,9 +38,15 @@ BlogTrader provides a centralised platform to buy and sell monetized blogs. This
 
 **Topic tags** - User have the ability to add tags to their listings. Doing so will help buyers search for their blog by niche and keywords associated with their targeted topic.
 
-BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rails Framework, it applies the MVC - model, view, controller - pattern. 
+BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rails Framework, it applies the MVC - model, view, controller - pattern. Compartmentalising each aspect of the development process addresses issues of separability and allows for integration of future features.
 
-********** TO BE EXPANDED ************
+When a user first encounters BlogTrader they will be prompted to create an account. This is facilitated by the Devise gem, and from there the user can participate in the marketplace as a buyer or a seller. As a seller, the user can create, view, edit and delete their listing. A listing is recognised as a blog entity, and all fields require an input. For buyers, they are free to browse the listings if they have an active account with BlogTrader. 
+
+A complete and thorough listing serves well to entice interest and buyers can make a deposit on a listing. When the buyer initiates the transaction - by clicking the button - the buyer is then redirected to the Stripe site to be securely processed. And with the use of the webhooks, when the buyer is redirected back to BlogTrader they will receive an onscreen confirmation of the deposit.
+
+Topic tags are a key feature on listings and are associated through a many-to-many relationship with a blog. Each tag represents a subject or theme of a blog, and in future releases, will help identify a listing in a search. Blogs_topics provides the scope, and all the associated topic tags are displayed on the listing. 
+
+Listings can be edited and delete in one central location: manage listing. This can be found in the accounts tab, conveniently located on the top right hand corner of the navbar. The current user ID is used to display only the listings that have been created by that user; this prevents unauthorised access to listings by buyers or other sellers. 
 
 
 ## Tech stack, APIs and third party services
@@ -85,7 +93,7 @@ BlogTrader is a two-side marketplace web-application. Built with the Ruby on Rai
 
 ## Project Management
 
-The scope of the project was determined prior to commencement of the development. 
+The scope of the project was determined prior to commencement of the development. After completing research and drafting wireframes, each application component was broken into tasks with checklists for smaller aspects of each task. 
 
 The MVP was developed with the Agile methodology. The project started with the essential features:
 

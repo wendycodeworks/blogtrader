@@ -12,8 +12,11 @@
             <div style="margin-top: 10px;"><% for i in @blog_topic %>
                     <div class="tag is-rounded"><%= i[:name]%></div>
                     <% end %></div>
+            <% if current_user.id != @blog.user_id %>
             <button data-stripe="payment" class="button is-success">Pay Deposit <%= number_to_currency(@blog.deposit_amount) %></button>
-            <div class="box"><%= @blog.description %></div>            
+            <% end %>
+            <div class="box" style="margin-top: 20px;"><%= @blog.description %></div>
+                        
             <script src="https://js.stripe.com/v3/"></script>
             <script>
                 document

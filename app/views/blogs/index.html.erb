@@ -2,7 +2,7 @@
   <div class="hero-body">
       <div class="container has-text-centered">
         
-            <%= search_form_for @q do |f| %>
+            <%= search_form_for @search do |f| %>
             <%= f.label :find_a_blog, class: "title", style: "color: white;" %>
             <%= f.search_field :title_cont, class: "input is-medium", placeholder: "Hello, is it me you're looking for?", style: "margin: 15px 0px 15px 0px;" %>
             <%= f.submit :Search, class: "button is-primary" %>

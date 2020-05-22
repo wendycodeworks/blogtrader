@@ -3,9 +3,8 @@ class BlogsController < ApplicationController
 
 # ==================== Search Methods ===================== #
     def index
-        @q = Blog.ransack(params[:q])
-        @blogs = @q.result(distinct: true)
-        @blogs = Blog.all
+        @search = Blog.ransack(params[:q])
+        @blogs = @search.result(distinct: true)
     end
 # ==================== Search Methods End ================= #
 # ===================== Blog Methods ====================== #
